@@ -7,36 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.min.css" class="rel">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Carme" rel="stylesheet">
     <title>Music Studio</title>
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Find Music</button>
-        </div>
-    </form>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-center">Music Studio</h1>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <form class="form-inline" onsubmit="itunesCtrl.getMusic(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                        <button type="submit" class="btn btn-primary" id="get-music-button">Find Music</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div id="songs">
-            <div class="row">
+
+            <!--<div class="row">
                 <div class="col-xs-12">
-                    <div class="well well-lg">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=11&bg=4d99e0&txtclr=ffffff&txt=100x100&w=100&h=100" class="img-resposive pull-left">
-                        <h2>title</h2>
-                        <h3>${artist}</h3>
-                        <h4>${album title}</h4>
-                        <h5>${cost}</h5>
-                        <p class="pull-right">${preview}</p>
+                    <div class="media">
+                        <div class="media-left">
+                            <img class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=11&bg=4d99e0&txtclr=ffffff&txt=100x100&w=100&h=100"
+                                class="img-resposive">
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">title</h2>
+                            <h3 class="media-heading">${artist}</h3>
+                            <h4 class="media-heading">${album title}</h4>
+                            <h5 class="media-heading">${cost}</h5>
+                        </div>
+                        <div class="media-right">
+                            <p>${preview}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
