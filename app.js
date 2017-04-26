@@ -10,9 +10,12 @@ function ItunesController(){
   function drawSongs(songList){
     console.log(songList);
     // This is where you task begins
-      
-    
-    
+    var template = "";
+      for(var i = 0; i < songList.length; i++) {
+          var song = songList[i];
+          template = "";
+      }
+
   }
   
 }
