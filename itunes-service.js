@@ -7,7 +7,7 @@ function ItunesService(){
       var url3 = '&media=music';
       var apiUrl = url + encodeURIComponent(url2 + url3);
       
-      $('#get-music-button').text('LOADING....');
+      $('#get-music-button').text('Finding Beat...');
       
       return $.getJSON(apiUrl).then(function(response){
         var songList = response.results.map(function (song) {
@@ -20,7 +20,7 @@ function ItunesService(){
                       preview: song.previewUrl
                     };
                 })
-        $('#get-music-button').text('GET MUSIC');
+        $('#get-music-button').text('Find the Beat');
         return songList;
       })
     }

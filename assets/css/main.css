@@ -8,7 +8,7 @@ img {
 
 .align-middle {
   margin-top: 25%;
-  margin-bottom: 25%;
+  margin-bottom: 10%;
 }
 
 h1 {
@@ -79,6 +79,15 @@ input.form-control {
   border: 0px solid #fff;
 }
 
+.btn-primary:active {
+  background-color: #000;
+}
+
 .btn-primary:hover {
   background-color: #6f445d;
+}
+
+i.fa {
+  color: #fff;
+  text-shadow: 3px 3px #000;
 }
