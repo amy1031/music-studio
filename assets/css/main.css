@@ -6,11 +6,17 @@ img {
   padding-right: 10px;
 }
 
+.align-middle {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
 h1 {
   font-family: Luckiest Guy;
-  font-size: 60px;
+  font-size: 75px;
   color: #fff;
   text-transform: uppercase;
+  text-shadow: 3px 3px #000000;
 }
 
 h2 {
@@ -43,7 +49,7 @@ h5 {
 }
 
 .media {
-  background-color: #fff;
+  background-color: #fafafa;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;

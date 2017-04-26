@@ -17,14 +17,14 @@ function ItunesController() {
       var song = songList[i];
       template += `
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <div class="media">
                     <div class="media-left">
                         <img class="media-object" src="${song.albumArt}"
                                 class="img-resposive">
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading" onclick="getElementById('sound').play()">${song.title}</h2>
+                        <h2 class="media-heading">${song.title}</h2>
                         <h3 class="media-heading">${song.artist}</h3>
                         <h4 class="media-heading">${song.collection}</h4>
                         <h5 class="media-heading">${song.price}</h5>
@@ -55,6 +55,16 @@ function ItunesController() {
       // if they are not the event.target 
       //audio.pause()
     }, true)
+
+    // document.addEventListener('play', function(event){
+    //   var playTitle = document.getElementsByTagName("h2");
+    //   for (var i = 0; i < playTitle.length; i++) {
+    //     if(playTitle[i] != event.target) {
+    //       playTitle[i].pause();
+    //     }
+    //   }
+    // }, true)
+
 
   } 
 
