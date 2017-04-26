@@ -10,7 +10,7 @@ function ItunesController() {
   var songsList = document.getElementById("songs");
 
   function drawSongs(songList) {
-    console.log(songList);
+    //console.log(songList);
     // This is where you task begins
     var template = "";
     for (var i = 0; i < songList.length; i++) {
@@ -24,22 +24,39 @@ function ItunesController() {
                                 class="img-resposive">
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading"><a href="${song.preview}">${song.title}</a></h2>
+                        <h2 class="media-heading" onclick="getElementById('sound').play()">${song.title}</h2>
                         <h3 class="media-heading">${song.artist}</h3>
-                        <h4 class="media-heading">${song.collection}</h4 >
+                        <h4 class="media-heading">${song.collection}</h4>
                         <h5 class="media-heading">${song.price}</h5>
                     </div >
                   <div class="media-right">
-                    <audio controls>
+                    <audio controls id="sound">
+                      <source src="${song.preview}" type="audio/ogg">
                       <source src="${song.preview}" type="audio/mpeg">
                     </audio>
+                    
                   </div>
               </div>
             </div >
         </div > `;
-    }
+
+    } 
     songsList.innerHTML = template;
-  }
+
+    document.addEventListener('play', function(event){
+      var playButton = document.getElementsByTagName("audio");
+      for (var i = 0; i < playButton.length; i++) {
+        if(playButton[i] != event.target) {
+          playButton[i].pause();
+        }
+      }
+      //get all audio tags
+      //itterate over 
+      // if they are not the event.target 
+      //audio.pause()
+    }, true)
+
+  } 
 
 }
 
