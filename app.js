@@ -24,13 +24,13 @@ function ItunesController() {
                                 class="img-resposive">
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading">${song.title}</h2>
+                        <h2 class="media-heading" onclick="document.getElementById('${song.trackId}').play()">${song.title}</h2>
                         <h3 class="media-heading">${song.artist}</h3>
                         <h4 class="media-heading">${song.collection}</h4>
                         <h5 class="media-heading">${song.price}</h5>
                     </div >
                   <div class="media-right">
-                    <audio controls id="sound">
+                    <audio controls id="${song.trackId}">
                       <source src="${song.preview}" type="audio/ogg">
                       <source src="${song.preview}" type="audio/mpeg">
                     </audio>
